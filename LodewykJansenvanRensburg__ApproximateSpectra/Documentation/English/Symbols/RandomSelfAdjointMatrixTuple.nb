@@ -1,0 +1,182 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      6916,        174]
+NotebookOptionsPosition[      5675,        141]
+NotebookOutlinePosition[      6215,        159]
+CellTagsIndexPosition[      6172,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["RandomSelfAdjointMatrixTuple", "ObjectName",
+ CellID->221901272,ExpressionUUID->"53fab57b-71fe-4420-871b-5bc2ad87fdf8"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"c4cdc881-4f90-4481-b431-0d5518180b50"],
+ Cell[BoxData[
+  RowBox[{"RandomSelfAdjointMatrixTuple", "[", 
+   RowBox[{"n", ",", "g"}], "]"}]], "InlineFormula",ExpressionUUID->
+  "7aacf7f9-29fd-4306-b95c-86fe3e36d1d5"],
+ " \n\[LineSeparator]Generates a random g-tuple of tuple of nxn matrices \
+A1,...,Ag such that each Ai is self-adjoint. This is used in conjunction with \
+",
+ Cell[BoxData["AnalyzeTupleSpectrum"], "Code",
+  CellChangeTimes->{{3.9604505020847816`*^9, 3.9604506266645193`*^9}, 
+    3.960450721464714*^9, {3.960450751751107*^9, 3.960450769478319*^9}, {
+    3.960450863133821*^9, 3.960450864476212*^9}, {3.9604513658482227`*^9, 
+    3.960451383989563*^9}, 3.960452999388685*^9, {3.963723873862523*^9, 
+    3.963723932569962*^9}, {3.9637239659674397`*^9, 3.963723980138492*^9}, {
+    3.963724010179266*^9, 3.963724013256044*^9}, {3.963724172097906*^9, 
+    3.963724253350498*^9}, {3.963724328019084*^9, 3.963724344241489*^9}, {
+    3.9637244046709633`*^9, 3.9637244061053877`*^9}, {3.963724472708214*^9, 
+    3.963724490687264*^9}, {3.963724710686343*^9, 3.963724744688743*^9}, {
+    3.9637251181435432`*^9, 3.963725152405328*^9}, {3.963725896665341*^9, 
+    3.9637259024832478`*^9}, 3.9637259830487623`*^9, {3.9637260556179*^9, 
+    3.963726135590754*^9}, 3.9637261825599747`*^9, 3.96372624584342*^9, {
+    3.9637262848912487`*^9, 3.96372630241574*^9}, {3.96372796093252*^9, 
+    3.963727963868883*^9}, 3.963728058653905*^9, {3.9637283352095623`*^9, 
+    3.9637284322972317`*^9}, {3.963728481156196*^9, 3.963728545286841*^9}, {
+    3.963728684666419*^9, 3.963728688991302*^9}, {3.963728755904958*^9, 
+    3.963728932298727*^9}, {3.96372911692467*^9, 3.963729158393602*^9}, {
+    3.963729207323386*^9, 3.963729208186266*^9}, {3.9637293517683067`*^9, 
+    3.963729356370332*^9}, {3.963729425003847*^9, 3.963729442633421*^9}, 
+    3.9637295353988237`*^9, {3.963729567196213*^9, 3.9637295690260897`*^9}, 
+    3.9637298207148533`*^9, {3.96374537697118*^9, 3.963745380967306*^9}, {
+    3.963745411521302*^9, 3.963745414792016*^9}, {3.963748799035082*^9, 
+    3.963748809920044*^9}},ExpressionUUID->
+  "975597cf-1480-4daf-8a7d-9a8dcd0d8c50"],
+ " to study what impact changing the coefficients have on the spectrum."
+}], "Usage",
+ CellChangeTimes->{
+  3.96375232911762*^9, {3.9637524007358103`*^9, 3.963752401587022*^9}, 
+   3.963752607440065*^9, {3.9637538894698067`*^9, 3.9637538922559433`*^9}},
+ CellID->1214401150,ExpressionUUID->"6cba05ba-1eeb-4ef6-a2c1-761f738e062e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "89eb7e0f-9a15-4c5a-a93e-87d069d95714"]
+}], "ExamplesInitializationSection",
+ CellID->220781372,ExpressionUUID->"c24c6b93-8561-45aa-9b25-a918a588a707"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<WikusJvR`ApproxSpectra`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->196578900,ExpressionUUID->"d6205534-281b-4724-8b6a-37cfe4f530e5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->809820478,ExpressionUUID->"9ce5c6cb-7bc1-4c03-b50b-e75fcfb500b6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", " ", "=", " ", "2"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"n", " ", "by", " ", "n", " ", "coefficients", " ", 
+      RowBox[{"matrices", ".", " ", "k"}]}], "=", "1"}], ",", "2", ",", "3", ",", 
+    RowBox[{"4", " ", "works"}]}], " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", " ", "=", " ", "2"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"tuple", " ", "lenght"}], " ", "-", " ", 
+    RowBox[{
+    "dont", " ", "change", " ", "since", " ", "only", " ", "works", " ", 
+     "for", " ", "2"}], "-", "tuples"}], "*)"}], "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Randomly", " ", "selects", " ", "to", " ", "self"}], "-", 
+    RowBox[{
+    "adjoint", " ", "matrices", " ", "of", " ", "given", " ", "size"}]}], 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"A", "=", " ", 
+   RowBox[{"RandomSelfAdjointMatrixTuple", "[", 
+    RowBox[{"n", ",", "g"}], "]"}]}], ";"}]}], "Code",
+ CellChangeTimes->{{3.963752350211961*^9, 3.9637523707279367`*^9}, {
+  3.963752493088632*^9, 3.9637525344758167`*^9}},
+ CellID->75492121,ExpressionUUID->"da5b8191-9ae1-4516-bada-205a5c7ad79e"]
+}, Open  ]]
+},
+WindowSize->{700.5, 761.25},
+WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
+TaggingRules-><|"Paclet" -> "WikusJvR/ApproxSpectra"|>,
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"b1de0bf9-610e-44b3-b488-ac98fb87492f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 125, 1, 73, "ObjectName",ExpressionUUID->"53fab57b-71fe-4420-871b-5bc2ad87fdf8",
+ CellID->221901272],
+Cell[704, 25, 2532, 39, 135, "Usage",ExpressionUUID->"6cba05ba-1eeb-4ef6-a2c1-761f738e062e",
+ CellID->1214401150]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3273, 69, 530, 14, 68, "ExamplesInitializationSection",ExpressionUUID->"c24c6b93-8561-45aa-9b25-a918a588a707",
+ CellID->220781372],
+Cell[3806, 85, 182, 3, 46, "ExampleInitialization",ExpressionUUID->"d6205534-281b-4724-8b6a-37cfe4f530e5",
+ CellID->196578900]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4025, 93, 442, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"9ce5c6cb-7bc1-4c03-b50b-e75fcfb500b6",
+ CellID->809820478],
+Cell[4470, 107, 1189, 31, 99, "Code",ExpressionUUID->"da5b8191-9ae1-4516-bada-205a5c7ad79e",
+ CellID->75492121]
+}, Open  ]]
+}
+]
+*)
+

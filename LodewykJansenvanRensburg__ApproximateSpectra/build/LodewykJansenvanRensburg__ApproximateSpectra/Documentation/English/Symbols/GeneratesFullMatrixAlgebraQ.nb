@@ -1,0 +1,258 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      9889,        248]
+NotebookOptionsPosition[      6975,        185]
+NotebookOutlinePosition[      9049,        235]
+CellTagsIndexPosition[      8965,        230]
+WindowTitle->GeneratesFullMatrixAlgebraQ
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "a2ee8471-07ad-46b8-a8e8-072b72dcada3"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "f8c464db-c383-4972-811e-95856a56942a"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "9a114eef-7277-4575-86f4-69583c79cdc5"]
+        }],ExpressionUUID->"36e42110-6d81-4798-ad7a-c1e97ce388f0"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+GeneratesFullMatrixAlgebraQ\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+GeneratesFullMatrixAlgebraQ"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+GeneratesFullMatrixAlgebraQ.html"], StandardForm]], "Input", 
+                TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+GeneratesFullMatrixAlgebraQ" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "f843351e-3a6f-4012-bd32-f3132fecf26f"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "a9b643d1-9a0d-4518-bc22-0d916fef638c"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"84aa083d-4074-4bee-8b6a-c9adb1db1a08"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"a33893f1-8ae7-4f18-838a-16f2c0f584ab"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "GeneratesFullMatrixAlgebraQ", "ObjectName",ExpressionUUID->
+      "175ef049-67eb-43be-9096-f2f186598be3"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"bd5ec3ee-11fd-4b49-a16b-aaefd8348694"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "b9e8fc61-b287-438c-b687-faf0c7ca85c5"]
+    }],ExpressionUUID->"08f7f3a2-4adc-4039-b557-312ead5a6f6f"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"011d8a1e-d45e-41cc-a8b7-\
+c2a5caec4977"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"GeneratesFullMatrixAlgebraQ", "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6f92f0c5-827e-4978-bead-bd1f9b4568ea"],
+     " \[LineSeparator]True if a 2-tuple generates the matrix algebra, and \
+false otherwise"
+    }],ExpressionUUID->"9995fe3d-6004-4ef9-9796-cde9a4cfdcb1"]}
+  }]], "Usage",
+ CellID->746411376,ExpressionUUID->"3c2e2962-7aae-431b-a5c7-f4fd07297631"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"c87c677e-3ff9-40ab-80d4-c329646596e9"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"678825a3-ca1d-44be-830f-e174d6b84b88"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "e84ece0d-5969-42a1-977b-b30150aeaf95"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1547345965,ExpressionUUID->"31e6581e-3c27-4947-97e4-b1b613761ce9"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproximateSpectra`\>\"",
+   "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->601354890,ExpressionUUID->"5314ffed-65d2-4f85-97df-512b214a972d"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"37e8b62c-e919-4024-8ef8-9d218c04eb8c"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"GeneratesFullMatrixAlgebraQ",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 27.622040}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> 
+    "GeneratesFullMatrixAlgebraQ[] True if a 2-tuple generates the matrix \
+algebra, and false otherwise", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "GeneratesFullMatrixAlgebraQ", "titlemodifier" -> "", "metadescription" -> 
+    "", "windowtitle" -> "GeneratesFullMatrixAlgebraQ", "type" -> "Symbol", 
+    "uri" -> "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+GeneratesFullMatrixAlgebraQ"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"84380789-8e92-476f-96e8-de6c65c83ac1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5107, 135, 1430, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"31e6581e-3c27-4947-97e4-b1b613761ce9",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1547345965]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8765, 223}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 3259, 77, 70, "AnchorBarGrid",ExpressionUUID->"84aa083d-4074-4bee-8b6a-c9adb1db1a08",
+ CellID->1],
+Cell[3857, 100, 126, 0, 70, "ContextNameCell",ExpressionUUID->"a33893f1-8ae7-4f18-838a-16f2c0f584ab"],
+Cell[CellGroupData[{
+Cell[4008, 104, 570, 14, 70, "ObjectNameGrid",ExpressionUUID->"011d8a1e-d45e-41cc-a8b7-c2a5caec4977"],
+Cell[4581, 120, 489, 10, 70, "Usage",ExpressionUUID->"3c2e2962-7aae-431b-a5c7-f4fd07297631",
+ CellID->746411376]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5107, 135, 1430, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"31e6581e-3c27-4947-97e4-b1b613761ce9",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1547345965],
+Cell[6540, 174, 235, 4, 70, "Input",ExpressionUUID->"5314ffed-65d2-4f85-97df-512b214a972d",
+ CellID->601354890]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[6893, 183, 78, 0, 70, "FooterCell",ExpressionUUID->"37e8b62c-e919-4024-8ef8-9d218c04eb8c"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

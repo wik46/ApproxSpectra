@@ -1,0 +1,381 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     15064,        371]
+NotebookOptionsPosition[     11250,        294]
+NotebookOutlinePosition[     13855,        352]
+CellTagsIndexPosition[     13770,        347]
+WindowTitle->SpectralRadiusFitPlot
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "c5cb0ac9-11c9-495c-b919-41202b385fcd"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "a2294866-0154-42dc-925d-1ad23505f50d"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "74789fd8-b1ee-4bd2-a25a-af96c2490fa9"]
+        }],ExpressionUUID->"5aba6ea4-922a-4a14-8169-ac3df76631d7"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusFitPlot\"" :> None, "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusFitPlot"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusFitPlot.html"], StandardForm]], "Input", TextClipboardType -> 
+                "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusFitPlot" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "5b29149d-a0d7-4a3b-bbe0-3adba2cc6f7c"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "81287752-7873-49df-b3b7-916192106124"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"f4829752-b5c9-4376-80fc-71233f274f1c"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"acb8d7af-c9fe-45e9-8eb7-907bf83f8b3d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "SpectralRadiusFitPlot", "ObjectName",ExpressionUUID->
+      "9d13487c-084e-4e58-b13d-fcd1084589d3"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"b2a1c080-a889-4175-af3e-4064fd4dfc88"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "fcb5271a-67d0-4ef4-b8d8-948d8bae2b95"]
+    }],ExpressionUUID->"a661e0d4-59ed-426e-86a3-8c5222e1c95d"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"5aa8ad1c-c234-45ec-8182-\
+4d8075938dd2"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"SpectralRadiusFitPlot", "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "75814efe-5e8d-4ed0-8198-5a3e25199bc9"],
+     " \[LineSeparator]The goal is to determine if the spectral radius of in \
+independent Haar unitary matrices convergence to the spectral radius in free \
+Haar unitary operators. \n\n\tThis function takes as input fixed coefficient \
+tuple A = {A1,A2}, computes the average spectral radius of A1 \[CircleTimes] \
+u1 + A2 \[CircleTimes] u2  over the specified number of realizations \
+\"SampleSize\". And then proceeds as the size grow from d = MatrixStarSize, \
+to d = MatrixStopSize. Usually up to 50x50 works well and give good \
+intuition.  This would suggests that average spectral radii converge to the \
+spectral radius of the limiting operator."
+    }],ExpressionUUID->"ce66b80d-7b67-49f5-a533-6d9de41d3a7f"]}
+  }]], "Usage",
+ CellID->1645647649,ExpressionUUID->"8fd47da3-e1d8-4b13-bc17-9de9ccaaea5c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"1c497d1e-670e-4303-8475-9483241b98dd"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"a4b6b771-a3d1-4238-8b71-84d779bedf4b"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "92252474-97fb-475e-a364-c45b3c04a100"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->523749965,ExpressionUUID->"ced86ba0-9459-4e73-b141-131efcf656a9"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproximateSpectra`\>\"",
+   "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->237925018,ExpressionUUID->"d38b6197-58e8-4aa3-b27b-7cde10babff2"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.3936718750000008, 13.206328125}}]],ExpressionUUID->
+  "e1e04d0a-7a94-46c5-be8f-871c07a63367"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"8d09d3a5-9eb2-415f-846f-f6af2c1cac07"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "127dc9c1-497e-4521-99be-8e406e505f25"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1336150406,ExpressionUUID->"bd95c202-0bbe-4d74-9c13-8f2c6b126594"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", "Parameters", " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"k", " ", "=", " ", "2"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Size", " ", "of", " ", "Coefficient", " ", "Matrix"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"g", " ", "=", " ", "2"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Length", " ", "of", " ", "tuple"}], ",", " ", 
+     RowBox[{
+     "must", " ", "be", " ", "2", " ", "for", " ", "AnalyzeTupleSpectrum"}]}],
+     "*)"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"SampleSize", " ", "=", " ", "200"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Average", " ", "over", " ", "this", " ", "amount", " ", "of", " ", 
+     "matrices"}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"MatrixStopSize", " ", "=", " ", "30"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Max", " ", "size", " ", "of", " ", "matrices"}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"MatrixStarSize", " ", "=", " ", "1"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Min", " ", "size", " ", "of", " ", "matrices"}], " ", "*)"}], 
+   "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Randomly", " ", "Generate", " ", "Coefficient", " ", "Matrix"}], 
+    "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "/", "2"}], ")"}], "*", 
+      RowBox[{"RandomSelfAdjointMatrixTuple", "[", 
+       RowBox[{"k", ",", " ", "g"}], "]"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"RandomComplex", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"g", ",", "k", ",", "k"}], "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{"PrintTuple", "[", "A", "]"}], "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Plots", " ", "the", " ", "Averaged", " ", "Spectral", " ", "Radius", " ",
+      "as", " ", "size", " ", "d", " ", "grows"}], " ", "*)"}], "\n", 
+   RowBox[{"SpectralRadiusFitPlot", "[", 
+    RowBox[{
+    "A", ",", " ", "SampleSize", ",", " ", "MatrixStarSize", ",", " ", 
+     "MatrixStopSize"}], "]"}], " "}]}]], "Code",
+ CellID->1017860829,ExpressionUUID->"6ebc8d0f-1a7e-4e66-968e-c3a94b003bcd"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"f1057ce8-8ce7-4e50-b0a3-a41f63d43f8b"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"SpectralRadiusFitPlot",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 31.710384}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> 
+    "SpectralRadiusFitPlot[] The goal is to determine if the spectral radius \
+of in independent Haar unitary matrices convergence to the spectral radius in \
+free Haar unitary operators. This function takes as input fixed coefficient \
+tuple A = {A1,A2}, computes the average spectral radius of A1 \\[CircleTimes] \
+u1 + A2 \\[CircleTimes] u2 over the specified number of realizations \
+\"SampleSize\". And then proceeds as the size grow from d = MatrixStarSize, \
+to d = MatrixStopSize. Usually up to 50x50 works well and give good \
+intuition. This would suggests that average spectral radii converge to the \
+spectral radius of the limiting operator.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "SpectralRadiusFitPlot", "titlemodifier" -> 
+    "", "metadescription" -> "", "windowtitle" -> "SpectralRadiusFitPlot", 
+    "type" -> "Symbol", "uri" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusFitPlot"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"d38ca763-2d0e-4748-a335-4d69d641d7c7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5619, 141, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"ced86ba0-9459-4e73-b141-131efcf656a9",
+   CellTags->"PrimaryExamplesSection",
+   CellID->523749965]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13571, 340}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[589, 21, 3226, 76, 70, "AnchorBarGrid",ExpressionUUID->"f4829752-b5c9-4376-80fc-71233f274f1c",
+ CellID->1],
+Cell[3818, 99, 126, 0, 70, "ContextNameCell",ExpressionUUID->"acb8d7af-c9fe-45e9-8eb7-907bf83f8b3d"],
+Cell[CellGroupData[{
+Cell[3969, 103, 564, 14, 70, "ObjectNameGrid",ExpressionUUID->"5aa8ad1c-c234-45ec-8182-4d8075938dd2"],
+Cell[4536, 119, 1046, 17, 70, "Usage",ExpressionUUID->"8fd47da3-e1d8-4b13-bc17-9de9ccaaea5c",
+ CellID->1645647649]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5619, 141, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"ced86ba0-9459-4e73-b141-131efcf656a9",
+ CellTags->"PrimaryExamplesSection",
+ CellID->523749965],
+Cell[7051, 180, 235, 4, 70, "Input",ExpressionUUID->"d38b6197-58e8-4aa3-b27b-7cde10babff2",
+ CellID->237925018],
+Cell[CellGroupData[{
+Cell[7311, 188, 1415, 37, 70, "ExampleSection",ExpressionUUID->"bd95c202-0bbe-4d74-9c13-8f2c6b126594",
+ CellID->1336150406],
+Cell[8729, 227, 2209, 57, 70, "Code",ExpressionUUID->"6ebc8d0f-1a7e-4e66-968e-c3a94b003bcd",
+ CellID->1017860829]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[11168, 292, 78, 0, 70, "FooterCell",ExpressionUUID->"f1057ce8-8ce7-4e50-b0a3-a41f63d43f8b"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

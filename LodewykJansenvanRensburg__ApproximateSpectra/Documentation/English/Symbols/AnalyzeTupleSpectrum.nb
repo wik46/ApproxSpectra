@@ -1,0 +1,260 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      9345,        252]
+NotebookOptionsPosition[      7365,        205]
+NotebookOutlinePosition[      7907,        223]
+CellTagsIndexPosition[      7864,        220]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["AnalyzeTupleSpectrum", "ObjectName",
+ CellID->2061166338,ExpressionUUID->"7d32fd19-f8db-4ce8-9b72-02603bed9516"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"e8f8ccf8-70f9-4f22-8bb1-f36fdb418d4b"],
+ Cell[BoxData[
+  RowBox[{"AnalyzeTupleSpectrum", "[", 
+   RowBox[{"A", ",", "U", ",", 
+    RowBox[{
+     ButtonBox["PlotStyle",
+      BaseStyle->"Link"], " ", "\[Rule]", " ", "\"\<2D\>\""}]}], "]"}]], 
+  "InlineFormula",ExpressionUUID->"9e9b86c5-6f5a-44aa-bb51-e6157de22c66"],
+ " \n\[LineSeparator]Compute and visualize an approximation to its spectrum \
+(eigenvalues), optionally in 2D or 3D. Highlight certain special spectral \
+radii, norms, and annular radii coming from positive and negative \
+combinations of the Kronecker products. It\[CloseCurlyQuote]s essentially a \
+spectral diagnostic and visualization tool for tuples of operators, motivated \
+by free probability / random matrix experiments."
+}], "Usage",
+ CellChangeTimes->{{3.963750821725183*^9, 3.963750842792199*^9}, {
+  3.963750940122945*^9, 3.963750940122973*^9}, {3.963750973187483*^9, 
+  3.963750978143284*^9}},
+ CellID->401337740,ExpressionUUID->"6a14c9c3-c1ec-4f7c-8579-a081580c79ea"],
+
+Cell["", "Notes",
+ CellChangeTimes->{{3.963750981303191*^9, 3.96375098165513*^9}},
+ CellID->1787524231,ExpressionUUID->"3b32b18e-4fbd-4ea3-8b64-8fd976b40e07"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->1121007051,ExpressionUUID->"7f52afe0-52ed-4caa-8a4e-e4dae540ac23"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->865762810,ExpressionUUID->"61bfd593-5045-43d5-ad6b-0a764bf98228"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "64b5f532-17bf-49ff-84a4-9fc3baf41c58"]
+}], "ExamplesInitializationSection",
+ CellID->1065561339,ExpressionUUID->"18b1e66d-4e21-4f87-ae2e-938348b9a7a1"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<WikusJvR`ApproxSpectra`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellChangeTimes->{{3.9637511718042593`*^9, 3.963751173667417*^9}},
+ CellID->527550008,ExpressionUUID->"5207a62b-d398-4111-8761-b09cd083a363"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->420194252,ExpressionUUID->"a955ce5a-3f0d-44e7-8150-8fd8c926ce87"],
+
+Cell["\<\
+Here we generate the matrix-coefficients A1, A2, and our Haar unitary \
+variable Un1 and Un2\
+\>", "ExampleText",
+ CellChangeTimes->{{3.963751469722406*^9, 3.963751501293707*^9}},
+ CellID->1046453002,ExpressionUUID->"f9d0af53-e612-4866-bafb-d8e5f5a77bfe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Create", " ", "a", " ", "2"}], "-", 
+    RowBox[{
+    "tuple", " ", "of", " ", "3", "x3", " ", "matrix", " ", 
+     "coefficients"}]}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"4", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "1.5"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], "}"}]}], ";"}],
+    "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Generate", " ", "2", " ", "Random", " ", "Haar", " ", "Unitaries"}], " ",
+     "*)"}], "\n", 
+   RowBox[{"d", "=", "500"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Works", " ", "for", " ", "upto", " ", "2000"}], ",", " ", 
+     RowBox[{"but", " ", "takes", " ", "time", " ", "to", " ", "run"}]}], " ",
+     "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"Un1", " ", "=", " ", 
+     RowBox[{"RandomVariate", "[", 
+      RowBox[{"CircularUnitaryMatrixDistribution", "[", "d", "]"}], "]"}]}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Un2", " ", "=", " ", 
+     RowBox[{"RandomVariate", "[", 
+      RowBox[{"CircularUnitaryMatrixDistribution", "[", "d", "]"}], "]"}]}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"U", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"Un1", ",", "Un2"}], "}"}]}], ";"}]}]}]], "Code",
+ CellChangeTimes->{{3.963751453052689*^9, 3.963751457877674*^9}},
+ CellID->1181767425,ExpressionUUID->"2966b01c-9ca4-424c-b876-8db40f1bd8a3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Analyzing", " ", "Spectra"}], "  ", "-", " ", 
+    RowBox[{
+    "Plots", " ", "the", " ", "spectrum", " ", "of", " ", "A1", " ", "otimes",
+      " ", "u1"}], " ", "+", " ", 
+    RowBox[{"A2", " ", "otimes", " ", "u2"}]}], " ", "*)"}], "\n", 
+  RowBox[{"AnalyzeTupleSpectrum", "[", 
+   RowBox[{"A", ",", "U", ",", 
+    RowBox[{"PlotStyle", " ", "->", " ", "\"\<2D\>\""}]}], "]"}], 
+  " "}]], "Code",
+ CellChangeTimes->{{3.9604504087069817`*^9, 3.96045040870704*^9}, {
+   3.960453293631145*^9, 3.960453322841865*^9}, {3.96046192111052*^9, 
+   3.960461921448471*^9}, {3.963746935354423*^9, 3.963746935589179*^9}, {
+   3.9637470334826183`*^9, 3.963747043544382*^9}, {3.963751045045101*^9, 
+   3.96375116088367*^9}, 3.963751444184978*^9, {3.96375150848664*^9, 
+   3.963751534461828*^9}},
+ CellID->1925996369,ExpressionUUID->"312beaf0-be83-47d0-aa40-c4bde91d4558"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Analyzing", " ", "Spectra"}], " ", "-", " ", 
+    RowBox[{
+    "Plots", " ", "the", " ", "3", "d", " ", "Histrogram", " ", "of", " ", 
+     "the", " ", "eigen"}], "-", 
+    RowBox[{"value", " ", "counting", " ", "measure"}]}], " ", "*)"}], "\n", 
+  RowBox[{"AnalyzeTupleSpectrum", "[", 
+   RowBox[{"A", ",", "U", ",", 
+    RowBox[{"PlotStyle", " ", "->", " ", "\"\<3D\>\""}]}], "]"}], 
+  " "}]], "Code",
+ CellChangeTimes->{{3.963751365578952*^9, 3.963751365579792*^9}, {
+   3.963751435071554*^9, 3.963751440786211*^9}, 3.9637515059033117`*^9, {
+   3.963751537055408*^9, 3.963751565447832*^9}},
+ CellID->405272982,ExpressionUUID->"acba2f22-9a3d-45a9-841c-30e26a45e2db"]
+}, Open  ]]
+},
+WindowSize->{1097.25, 761.25},
+WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
+TaggingRules-><|"Paclet" -> "WikusJvR/ApproxSpectra"|>,
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"3d91b2be-2d25-4631-a34c-2985bcfd816a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 118, 1, 73, "ObjectName",ExpressionUUID->"7d32fd19-f8db-4ce8-9b72-02603bed9516",
+ CellID->2061166338],
+Cell[697, 25, 1054, 19, 152, "Usage",ExpressionUUID->"6a14c9c3-c1ec-4f7c-8579-a081580c79ea",
+ CellID->401337740],
+Cell[1754, 46, 158, 2, 26, "Notes",ExpressionUUID->"3b32b18e-4fbd-4ea3-8b64-8fd976b40e07",
+ CellID->1787524231]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1949, 53, 118, 1, 38, "MoreAboutSection",ExpressionUUID->"7f52afe0-52ed-4caa-8a4e-e4dae540ac23",
+ CellID->1121007051],
+Cell[2070, 56, 100, 1, 18, "MoreAbout",ExpressionUUID->"61bfd593-5045-43d5-ad6b-0a764bf98228",
+ CellID->865762810]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2207, 62, 531, 14, 68, "ExamplesInitializationSection",ExpressionUUID->"18b1e66d-4e21-4f87-ae2e-938348b9a7a1",
+ CellID->1065561339],
+Cell[2741, 78, 250, 4, 46, "ExampleInitialization",ExpressionUUID->"5207a62b-d398-4111-8761-b09cd083a363",
+ CellID->527550008]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3028, 87, 442, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"a955ce5a-3f0d-44e7-8150-8fd8c926ce87",
+ CellID->420194252],
+Cell[3473, 101, 265, 5, 23, "ExampleText",ExpressionUUID->"f9d0af53-e612-4866-bafb-d8e5f5a77bfe",
+ CellID->1046453002],
+Cell[3741, 108, 1934, 55, 175, "Code",ExpressionUUID->"2966b01c-9ca4-424c-b876-8db40f1bd8a3",
+ CellID->1181767425],
+Cell[5678, 165, 929, 19, 63, "Code",ExpressionUUID->"312beaf0-be83-47d0-aa40-c4bde91d4558",
+ CellID->1925996369],
+Cell[6610, 186, 739, 16, 63, "Code",ExpressionUUID->"acba2f22-9a3d-45a9-841c-30e26a45e2db",
+ CellID->405272982]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,258 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      9890,        248]
+NotebookOptionsPosition[      6987,        185]
+NotebookOutlinePosition[      9050,        235]
+CellTagsIndexPosition[      8966,        230]
+WindowTitle->SpectralRadiusHistogramPlotWithFitGUE
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "da601842-2728-49a5-b4eb-811dd89f6939"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "ed22db22-4cd4-4d33-9584-83b6ed81dcf4"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "0b649222-e505-46d8-b850-ecdb6f6ac234"]
+        }],ExpressionUUID->"261b91d9-6d10-4a6f-a084-bcf90578eab1"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFitGUE\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFitGUE"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFitGUE.html"], StandardForm]], "Input", 
+                TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFitGUE" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "7858873d-46d0-4deb-b1b0-362ea236d76e"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "706c8906-3af0-4a27-bf15-aa485407505f"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"b808eade-58d9-4428-ac45-25979a03d460"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"a9a5b2a8-449d-4ec5-8e41-f8cbb7222dc6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "SpectralRadiusHistogramPlotWithFitGUE", "ObjectName",ExpressionUUID->
+      "0ac0d361-034a-4882-be92-d8d48c878eed"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"7ee4273d-74a7-4305-a354-0c4d5d5a11aa"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "b8c372ad-5451-4ee7-8cea-f14783f171ea"]
+    }],ExpressionUUID->"2a4a9fc4-f1ac-49c0-b16e-1047b6f24696"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"c6bddfda-6993-4423-ac68-\
+4d7deca0c2b7"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"SpectralRadiusHistogramPlotWithFitGUE", "[", "]"}]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1da19baa-7de0-41d9-af6a-f0a39906df0b"],
+     " \[LineSeparator]XXXX"
+    }],ExpressionUUID->"0acd8f2c-b6b6-4b00-9b12-bb0398f17e37"]}
+  }]], "Usage",
+ CellID->1106406049,ExpressionUUID->"445d6af0-ff7f-40f6-b40a-47157be786ef"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"00c263b1-2d62-48b9-be9e-feb60a8d9167"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"cdd5f9ae-f557-41f3-8503-a7d657a656e9"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "25285e32-d58e-4079-82f3-26b90199b875"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->479691757,ExpressionUUID->"e3f68e21-7add-43f7-afd8-8fc3f8cdac58"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproximateSpectra`\>\"",
+   "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->194025012,ExpressionUUID->"edbb11f2-2213-40a7-8649-1c718f7b6267"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"c3b1d770-ca29-463c-84fe-3feb03da7640"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"SpectralRadiusHistogramPlotWithFitGUE",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 32.931172}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> "SpectralRadiusHistogramPlotWithFitGUE[] XXXX", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "SpectralRadiusHistogramPlotWithFitGUE", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> 
+    "SpectralRadiusHistogramPlotWithFitGUE", "type" -> "Symbol", "uri" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFitGUE"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"88b85fa5-1004-496a-9aec-8b34f75a2af2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5120, 135, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"e3f68e21-7add-43f7-afd8-8fc3f8cdac58",
+   CellTags->"PrimaryExamplesSection",
+   CellID->479691757]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8767, 223}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[605, 21, 3299, 77, 70, "AnchorBarGrid",ExpressionUUID->"b808eade-58d9-4428-ac45-25979a03d460",
+ CellID->1],
+Cell[3907, 100, 126, 0, 70, "ContextNameCell",ExpressionUUID->"a9a5b2a8-449d-4ec5-8e41-f8cbb7222dc6"],
+Cell[CellGroupData[{
+Cell[4058, 104, 580, 14, 70, "ObjectNameGrid",ExpressionUUID->"c6bddfda-6993-4423-ac68-4d7deca0c2b7"],
+Cell[4641, 120, 442, 10, 70, "Usage",ExpressionUUID->"445d6af0-ff7f-40f6-b40a-47157be786ef",
+ CellID->1106406049]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5120, 135, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"e3f68e21-7add-43f7-afd8-8fc3f8cdac58",
+ CellTags->"PrimaryExamplesSection",
+ CellID->479691757],
+Cell[6552, 174, 235, 4, 70, "Input",ExpressionUUID->"edbb11f2-2213-40a7-8649-1c718f7b6267",
+ CellID->194025012]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[6905, 183, 78, 0, 70, "FooterCell",ExpressionUUID->"c3b1d770-ca29-463c-84fe-3feb03da7640"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

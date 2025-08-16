@@ -1,0 +1,473 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     18177,        463]
+NotebookOptionsPosition[     14497,        387]
+NotebookOutlinePosition[     16558,        437]
+CellTagsIndexPosition[     16473,        432]
+WindowTitle->EstimateSpectralRadius
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d116af7e-63d6-42b4-aff8-dc104036a1ab"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "135fa6e1-b8cd-4bf8-8cab-102672578e52"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "b7687748-892c-4916-8914-f1b991145ead"]
+        }],ExpressionUUID->"4c6fc798-17e2-44cd-aa3a-ca7a8f3c49d9"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+EstimateSpectralRadius\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+EstimateSpectralRadius"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+EstimateSpectralRadius.html"], StandardForm]], "Input", TextClipboardType -> 
+                "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+EstimateSpectralRadius" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "bd42c9c8-68b6-468e-aea7-bf8fcd9a53f8"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "9b179c6e-0188-4624-95d8-fe8a0366728e"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"75e821f8-9cb4-40f7-bf04-093fcf1d93f0"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"93c1eab3-3915-4364-b964-8073ade703c2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "EstimateSpectralRadius", "ObjectName",ExpressionUUID->
+      "3dded49f-e29b-49bb-a779-d6ec629b3c5e"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"89c8c549-a9d0-4572-ba75-3cc1f776ebdc"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "469e6982-2d71-4dba-a364-116d1048b33f"]
+    }],ExpressionUUID->"93e12554-8ed8-4f3d-817b-41b8c6c4aa4d"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"99110d00-eb13-47b6-bb3c-\
+98a1a2023557"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"EstimateSpectralRadius", "[", 
+       RowBox[{
+       "A", ",", " ", "\"\<\!\(\*StyleBox[\"outer\", \"TI\"]\)\>\"", ",", 
+        "  ", 
+        RowBox[{
+         TemplateBox[{
+           Cell[
+            TextData["Verbose"]], "paclet:ref/Verbose"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}], " ", "\[Rule]", " ", 
+         TemplateBox[{
+           Cell[
+            TextData["False"]], "paclet:ref/False"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]}], ",", " ", 
+        RowBox[{"Extremum", " ", "\[Rule]", " ", "\"\<Max\>\""}]}], "]"}]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "9fd5cf34-4245-4d36-a3e9-2a0e251c98fe"],
+     " \[LineSeparator]"
+    }],ExpressionUUID->"47d41d3a-02d7-48c1-b778-9d4e7e47bf16"]}
+  }]], "Usage",
+ CellID->1354400876,ExpressionUUID->"09682063-6aaf-43fe-a498-135c5b924017"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {-0.09851562499999922, 13.698515625}}]],
+    ExpressionUUID->"795fd9f7-e720-4b93-9cf0-fa1f4336ef62"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"056b98c2-bc33-4e4a-b47b-8559c9758b9c"],
+   "Details"
+  }], "NotesFrameText",ExpressionUUID->"0306c586-3fd0-48b4-ac2a-2c899f252f2c"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"ac77e515-7c00-4666-8eaf-5ee58f312e64"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->1844401164,ExpressionUUID->"649e38cf-edf4-4394-bc36-34495556cd6b"],
+
+Cell[TextData[{
+ "An observation one makes is that the eigen values of ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"A1", " ", "\[CircleTimes]", " ", "A1bar"}], " ", "+", " ", 
+   RowBox[{"A2", " ", "\[CircleTimes]", " ", "A2bar"}]}]], "Code",
+  ExpressionUUID->"db8d3b0a-8173-48cb-9dad-44c7da5edd5f"],
+ " and ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"A1", " ", "\[CircleTimes]", " ", "A1bar"}], " ", "-", " ", 
+   RowBox[{"A2", " ", "\[CircleTimes]", " ", "A2bar"}]}]], "Code",
+  ExpressionUUID->"eb9a52a4-a2a1-4089-b563-3eb3ce0a4f66"],
+ " give you information about the radius of the annuli in the spectrum of ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"A1", " ", "\[CircleTimes]", " ", "u1"}], " ", "+", " ", 
+   RowBox[{"A2", " ", "\[CircleTimes]", " ", "u2"}]}]], "Code",ExpressionUUID->
+  "019d3019-4bcd-4ab8-839b-741127dc1ea7"],
+ ". The purpose of this code is to study these eigen values. The first otimes \
+denotes the Kronecker product of matrices, where the A1bar we mean take the \
+complex conjugate of the entries, but not the transpose too."
+}], "Notes",
+ CellID->1525418101,ExpressionUUID->"1e8fa3e9-38ad-4ec7-ba47-670ee0f3d7b9"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"be2f0ed3-f353-458f-948a-cf98cb44572b"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"04688b93-a931-48c9-a252-8ff3c70b821f"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "a3732e71-7eaf-41b5-aa26-bf8f37081ae2"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1521146920,ExpressionUUID->"a0597ebf-bad0-4c72-9df4-3ad93cc54ee6"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.3936718750000008, 13.206328125}}]],ExpressionUUID->
+  "15ff8da0-a622-41b2-ba8f-e93598764796"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"a8bdb731-4b64-4641-bae8-21efce2fa047"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "bec7f5a7-0a1c-443b-ad9e-3cd7a453448b"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1692211137,ExpressionUUID->"270b9eee-186b-4bb8-a90e-2cce4b07e590"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Create", " ", "a", " ", "coefficient", " ", "tuple"}], " ", "-",
+      " ", 
+     RowBox[{"only", " ", "works", " ", "for", " ", "2"}], "-", "tuple"}], ",",
+     " ", 
+    RowBox[{"but", " ", "of", " ", "any", " ", "size"}]}], " ", "*)"}], "\n", 
+  
+  RowBox[{
+   RowBox[{
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], "}"}]}], ";"}], "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"\"\<outer\>\"", " ", "means", " ", "we", " ", "take", " ", 
+      "the", " ", "sum"}], ",", " ", 
+     RowBox[{
+     "where", " ", "\"\<inner\>\"", " ", "we", " ", "take", " ", "the", " ", 
+      RowBox[{"difference", ".", " ", "\"\<Max\>\""}], " ", "means", " ", 
+      "maximum", " ", 
+      RowBox[{"Abs", "[", "eigenvalue", "]"}], " ", "and", " ", "min", " ", 
+      "for", " ", 
+      RowBox[{"mnimum", "."}]}]}], " ", "*)"}], "\n", 
+   RowBox[{"specRad", " ", "=", " ", 
+    RowBox[{"Abs", "[", 
+     RowBox[{"EstimateSpectralRadius", "[", 
+      RowBox[{"A", ",", " ", "\"\<outer\>\"", ",", "  ", 
+       RowBox[{"Verbose", " ", "->", " ", "False"}], ",", " ", 
+       RowBox[{"Extremum", " ", "->", " ", "\"\<Max\>\""}]}], "]"}], "]"}]}], 
+   "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Verbose", "->", " ", 
+      RowBox[{
+      "False", " ", "just", " ", "means", " ", "we", " ", "supress", " ", 
+       "some", " ", "print", " ", "information", " ", "to", " ", "screen"}]}],
+      ",", " ", 
+     RowBox[{"and", " ", "choose", " ", "True", " ", 
+      RowBox[{"too", "."}]}]}], " ", "*)"}]}]}]], "Code",
+ CellID->1827905082,ExpressionUUID->"2544e9cf-7288-4374-91dc-936aa9d96469"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Other", " ", "parameters", " ", "chosen"}], " ", "*)"}], "\n", 
+  RowBox[{"specRad", " ", "=", " ", 
+   RowBox[{"Abs", "[", 
+    RowBox[{"EstimateSpectralRadius", "[", 
+     RowBox[{"A", ",", " ", "\"\<inner\>\"", ",", "  ", 
+      RowBox[{"Verbose", " ", "->", " ", "True"}], ",", " ", 
+      RowBox[{"Extremum", " ", "->", " ", "\"\<Min\>\""}]}], "]"}], 
+    "]"}]}]}]], "Code",
+ CellID->1295120429,ExpressionUUID->"48413d91-ad5c-4274-bf86-f38fb1bd82d7"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"e324468a-4ecf-4536-8b45-087b11e25aa6"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"EstimateSpectralRadius",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed, "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 25.836015}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> 
+    "EstimateSpectralRadius[A, \" outer\", Verbose -> False, Extremum -> \
+\"Max\"] ", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "EstimateSpectralRadius", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "EstimateSpectralRadius", "type" -> "Symbol", "uri" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+EstimateSpectralRadius"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"76a3db46-841e-443b-92d5-b7a40e3c93e4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8720, 229, 1430, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"a0597ebf-bad0-4c72-9df4-3ad93cc54ee6",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1521146920]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 16273, 425}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[590, 21, 3239, 77, 70, "AnchorBarGrid",ExpressionUUID->"75e821f8-9cb4-40f7-bf04-093fcf1d93f0",
+ CellID->1],
+Cell[3832, 100, 126, 0, 70, "ContextNameCell",ExpressionUUID->"93c1eab3-3915-4364-b964-8073ade703c2"],
+Cell[CellGroupData[{
+Cell[3983, 104, 565, 14, 70, "ObjectNameGrid",ExpressionUUID->"99110d00-eb13-47b6-bb3c-98a1a2023557"],
+Cell[4551, 120, 964, 25, 70, "Usage",ExpressionUUID->"09682063-6aaf-43fe-a498-135c5b924017",
+ CellID->1354400876]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5552, 150, 1903, 48, 70, "NotesSection",ExpressionUUID->"649e38cf-edf4-4394-bc36-34495556cd6b",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1844401164],
+Cell[7458, 200, 1135, 23, 70, "Notes",ExpressionUUID->"1e8fa3e9-38ad-4ec7-ba47-670ee0f3d7b9",
+ CellID->1525418101]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[8720, 229, 1430, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"a0597ebf-bad0-4c72-9df4-3ad93cc54ee6",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1521146920],
+Cell[CellGroupData[{
+Cell[10175, 270, 1415, 37, 70, "ExampleSection",ExpressionUUID->"270b9eee-186b-4bb8-a90e-2cce4b07e590",
+ CellID->1692211137],
+Cell[11593, 309, 2075, 55, 70, "Code",ExpressionUUID->"2544e9cf-7288-4374-91dc-936aa9d96469",
+ CellID->1827905082],
+Cell[13671, 366, 514, 11, 70, "Code",ExpressionUUID->"48413d91-ad5c-4274-bf86-f38fb1bd82d7",
+ CellID->1295120429]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[14415, 385, 78, 0, 70, "FooterCell",ExpressionUUID->"e324468a-4ecf-4536-8b45-087b11e25aa6"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

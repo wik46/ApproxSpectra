@@ -1,0 +1,192 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      6273,        184]
+NotebookOptionsPosition[      5009,        150]
+NotebookOutlinePosition[      5572,        169]
+CellTagsIndexPosition[      5529,        166]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["AnalyzeCharPoly", "ObjectName",
+ CellID->799675548,ExpressionUUID->"134a8328-16d6-4d33-90c7-f67df370d164"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"db6aff8e-2c6a-455e-be20-a7b5e8b99f55"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["AnalyzeCharPoly",
+    BaseStyle->"Link",
+    ButtonData->"paclet:WikusJvRApproxSpectra/ref/AnalyzeCharPoly"], "[", 
+   RowBox[{"A", ",", 
+    ButtonBox["True",
+     BaseStyle->"Link"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "a720a57e-e17c-4d0b-bc20-0f4e3d41daa9"],
+ "\[LineSeparator]computes and plots the characteristic polynomial of  A1bar \
+\[CircleTimes] A1 + A2bar \[CircleTimes] A2 and A1bar \[CircleTimes] A1 - \
+A2bar \[CircleTimes] A2, along with all there roots. That is the eigenvalues \
+of the respective matrices."
+}], "Usage",
+ CellChangeTimes->{
+  3.963751694974043*^9, {3.963753923233552*^9, 3.963753923457041*^9}, {
+   3.963753962491023*^9, 3.963754025165492*^9}, {3.963754105902896*^9, 
+   3.9637541222074614`*^9}},
+ CellID->426033023,ExpressionUUID->"72e8d1d0-9b46-4300-a3a6-598118b3dcf1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "cf41b6c0-9662-46ef-abf4-d45d6c671994"]
+}], "ExamplesInitializationSection",
+ CellID->1043500469,ExpressionUUID->"8c0d03ad-e1e4-4d9d-81f3-ad0053565e2e"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproxSpectra`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellChangeTimes->{3.9643632609922037`*^9},
+ CellID->703976078,ExpressionUUID->"cd55dfc5-ac9f-47c2-8957-9c662b4d2273"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->1986444062,ExpressionUUID->"7c613bfe-67c1-41b1-bbd0-4378edaac4cd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Example", " ", "matrices"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"A1", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{"Pi", "/", "4"}], "]"}], ",", " ", 
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"Pi", "/", "4"}], "]"}]}]}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          RowBox[{"Pi", "/", "4"}], "]"}], ",", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"Pi", "/", "4"}], "]"}]}], "}"}]}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"A2", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"1", "/", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}], ",", " ", 
+         RowBox[{"I", "/", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"I", "/", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}], ",", " ", 
+         RowBox[{"1", "/", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}]}], "}"}]}], ";"}], "\n", 
+   
+   RowBox[{
+    RowBox[{"A", " ", "=", 
+     RowBox[{"{", 
+      RowBox[{"A1", ",", "A2"}], "}"}]}], ";"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Compute", " ", "Charateristic", " ", "Polynomials"}], " ", 
+    "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"AnalyzeCharPoly", "[", 
+     RowBox[{"A", ",", " ", "True"}], "]"}], ";"}], "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "True", " ", "means", " ", "you", " ", "print", " ", "additional", " ", 
+     "info", " ", "to", " ", "the", " ", 
+     RowBox[{"screen", ".", " ", "Can"}], " ", "be", " ", "False", " ", "if", 
+     " ", "you", " ", "just", " ", "want", " ", "polys", " ", "plotted"}], 
+    "*)"}]}]}]], "Code",
+ CellChangeTimes->{{3.9637540587709827`*^9, 3.963754095481196*^9}, {
+  3.963754153547731*^9, 3.963754155876668*^9}},
+ CellID->861726599,ExpressionUUID->"abcab3d2-1b40-453d-9b32-5045fbc68938"]
+}, Open  ]]
+},
+WindowSize->{1386, 761.25},
+WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
+TaggingRules-><|"Paclet" -> "WikusJvR/ApproxSpectra"|>,
+CellContext->"Global`",
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"63ea1cc8-8e9a-4b80-ac23-34de1dbce289"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 112, 1, 73, "ObjectName",ExpressionUUID->"134a8328-16d6-4d33-90c7-f67df370d164",
+ CellID->799675548],
+Cell[691, 25, 950, 20, 93, "Usage",ExpressionUUID->"72e8d1d0-9b46-4300-a3a6-598118b3dcf1",
+ CellID->426033023]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1678, 50, 531, 14, 68, "ExamplesInitializationSection",ExpressionUUID->"8c0d03ad-e1e4-4d9d-81f3-ad0053565e2e",
+ CellID->1043500469],
+Cell[2212, 66, 242, 4, 46, "ExampleInitialization",ExpressionUUID->"cd55dfc5-ac9f-47c2-8957-9c662b4d2273",
+ CellID->703976078]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2491, 75, 443, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"7c613bfe-67c1-41b1-bbd0-4378edaac4cd",
+ CellID->1986444062],
+Cell[2937, 89, 2056, 58, 162, "Code",ExpressionUUID->"abcab3d2-1b40-453d-9b32-5045fbc68938",
+ CellID->861726599]
+}, Open  ]]
+}
+]
+*)
+

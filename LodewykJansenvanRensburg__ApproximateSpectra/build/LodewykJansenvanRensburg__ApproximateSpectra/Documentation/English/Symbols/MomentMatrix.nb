@@ -1,0 +1,254 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      9566,        244]
+NotebookOptionsPosition[      6797,        183]
+NotebookOutlinePosition[      8726,        231]
+CellTagsIndexPosition[      8642,        226]
+WindowTitle->MomentMatrix
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "aa3f9315-132b-4b5a-a678-85a83bf09e7b"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "c4815096-21e9-4e88-abe9-a311fa927c36"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "71c240ac-21f4-47f1-9c95-437b563cc4e9"]
+        }],ExpressionUUID->"62b4402a-aa06-4596-9456-10db4e4301b7"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+MomentMatrix\"" :> None, "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+MomentMatrix"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/MomentMatrix.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+              False]]; SelectionMove[
+           DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+MomentMatrix" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "337df35c-94e3-48cc-8f7c-386b9ce0395b"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "442119f0-38ee-44aa-b993-254d3def4aa4"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"9ccbf903-0d0c-4d0b-acb0-46ddc13eb131"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"ff9d4a6c-d5e7-43ad-9391-855dd4693a2a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MomentMatrix", "ObjectName",ExpressionUUID->
+      "3c0b4b77-cbe5-4fc0-9190-84cfe345703f"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"7984b18b-5890-4061-a9f1-30d8b272a52b"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "c9f4fa4d-4cb1-4ad4-b08d-ba45c8052c19"]
+    }],ExpressionUUID->"13fd41ab-15eb-4fbd-96c4-0181ffc21b11"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"08ea9ecf-1356-4ef8-b54e-\
+e4f48be55485"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"MomentMatrix", "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4aceea5a-0ce3-4106-934a-2febd4cf8931"],
+     " \[LineSeparator]XXXX"
+    }],ExpressionUUID->"3b74043b-9508-445b-9278-3f91c2f3ab12"]}
+  }]], "Usage",
+ CellID->1490544033,ExpressionUUID->"9e01d4d6-06ef-411a-a4d3-9a8a8173038b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"c86bdff3-4450-43f4-a78a-85b2f64ba719"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"1cad78ff-0513-4840-8e04-9bbdf00f8a9a"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "1a9739e3-72b8-4976-bef9-b642289746e3"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1231045566,ExpressionUUID->"e23d770f-3e5a-4bd2-acc7-9b8f8368c39f"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproximateSpectra`\>\"",
+   "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->1287159007,ExpressionUUID->"18a498c3-a38d-4ab6-8836-45ca22e189b1"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"452fc98b-fd6d-4dfa-9bff-dc1847191220"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MomentMatrix",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 28.814106}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> "MomentMatrix[] XXXX", "synonyms" -> {}, "tabletags" -> {}, 
+    "title" -> "MomentMatrix", "titlemodifier" -> "", "metadescription" -> "",
+     "windowtitle" -> "MomentMatrix", "type" -> "Symbol", "uri" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+MomentMatrix"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"b16dec48-177d-4a6f-a50f-35516e3329cd"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4928, 133, 1430, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"e23d770f-3e5a-4bd2-acc7-9b8f8368c39f",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1231045566]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8442, 219}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[580, 21, 3189, 76, 70, "AnchorBarGrid",ExpressionUUID->"9ccbf903-0d0c-4d0b-acb0-46ddc13eb131",
+ CellID->1],
+Cell[3772, 99, 126, 0, 70, "ContextNameCell",ExpressionUUID->"ff9d4a6c-d5e7-43ad-9391-855dd4693a2a"],
+Cell[CellGroupData[{
+Cell[3923, 103, 555, 14, 70, "ObjectNameGrid",ExpressionUUID->"08ea9ecf-1356-4ef8-b54e-e4f48be55485"],
+Cell[4481, 119, 410, 9, 70, "Usage",ExpressionUUID->"9e01d4d6-06ef-411a-a4d3-9a8a8173038b",
+ CellID->1490544033]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4928, 133, 1430, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"e23d770f-3e5a-4bd2-acc7-9b8f8368c39f",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1231045566],
+Cell[6361, 172, 236, 4, 70, "Input",ExpressionUUID->"18a498c3-a38d-4ab6-8836-45ca22e189b1",
+ CellID->1287159007]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[6715, 181, 78, 0, 70, "FooterCell",ExpressionUUID->"452fc98b-fd6d-4dfa-9bff-dc1847191220"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

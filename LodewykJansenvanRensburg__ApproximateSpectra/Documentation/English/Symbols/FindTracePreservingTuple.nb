@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      5639,        159]
+NotebookOptionsPosition[      4283,        124]
+NotebookOutlinePosition[      4825,        142]
+CellTagsIndexPosition[      4782,        139]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["FindTracePreservingTuple", "ObjectName",
+ CellID->1789626230,ExpressionUUID->"5169aaf7-6052-4692-b28f-a5ce1dd3599f"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"9bcf5bb1-8f47-4784-9936-d8a873d6d3dc"],
+ Cell[BoxData[
+  RowBox[{"FindTracePreservingTuple", "[", 
+   RowBox[{"numTries", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "intRange"}], ",", " ", "intRange"}], "}"}], ",", " ", 
+    "False"}], "]"}]], "InlineFormula",ExpressionUUID->
+  "3156b6ae-ef45-4cc5-93d8-80434684f3c9"],
+ " \[LineSeparator]By \"Trace preserving\" we mean that the 2-tuple satisfy \
+A1* A1 + A2* A2 = aI, scalar of identity. How the code works it generates a \
+few random numbers, and attempts to solve an equation such that we satisfy \
+the trace preserving identity. Sometimes there is no solution. numTries = 15 \
+works well, and quick. Also the integer range is where the random numbers are \
+chosen from."
+}], "Usage",
+ CellChangeTimes->{{3.963753574386059*^9, 3.963753575282166*^9}, {
+  3.963753729126341*^9, 3.96375384081122*^9}},
+ CellID->712668730,ExpressionUUID->"cad3f3fa-df09-481c-8ed1-c292287fccd3"],
+
+Cell["XXXX", "Notes",
+ CellID->901002421,ExpressionUUID->"7c64e8f7-f862-4114-b709-bfa7f6532180"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "3bc818e8-cfc8-421e-af30-5a57cc0be250"]
+}], "ExamplesInitializationSection",
+ CellID->886113615,ExpressionUUID->"1bf8a07c-1f3f-4c0c-8569-9ea267bb7a34"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<WikusJvR`ApproxSpectra`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->1841119390,ExpressionUUID->"4307132e-8cb1-44dc-9652-d7fa4f09877c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->586990925,ExpressionUUID->"1d384147-76e1-40ce-ac9d-c935559759b2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"numTries", " ", "=", " ", "15"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Solving", " ", "Solutions", " ", "based", " ", "on", " ", "random", " ", 
+     
+     RowBox[{"numebers", ".", " ", "Sometimes"}], " ", "no", " ", 
+     "solution"}], ",", " ", 
+    RowBox[{
+    "but", " ", "then", " ", "just", " ", "try", " ", "again", " ", "with", " ",
+      "different", " ", "random", " ", "numbers"}]}], " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"intRange", " ", "=", " ", "10"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Some", " ", "integer", " ", "entries", " ", "of", " ", "coefficient", " ",
+     "matrices", " ", "are", " ", "taken", " ", "randomly", " ", "between", " ",
+     "this", " ", "range"}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"A", " ", "=", " ", 
+   RowBox[{"FindTracePreservingTuple", "[", 
+    RowBox[{"numTries", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "intRange"}], ",", " ", "intRange"}], "}"}], ",", " ", 
+     "False"}], "]"}]}], ";"}]}], "Code",
+ CellChangeTimes->{{3.9637536361552057`*^9, 3.963753645978249*^9}},
+ CellID->1719252291,ExpressionUUID->"791163ae-49c3-4983-a229-ebe551995f25"]
+}, Open  ]]
+},
+WindowSize->{1191.75, 761.25},
+WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
+TaggingRules-><|"Paclet" -> "WikusJvR/ApproxSpectra"|>,
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"054b5e01-03e1-4b04-a5d9-a76815c330d1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 122, 1, 73, "ObjectName",ExpressionUUID->"5169aaf7-6052-4692-b28f-a5ce1dd3599f",
+ CellID->1789626230],
+Cell[701, 25, 1002, 19, 127, "Usage",ExpressionUUID->"cad3f3fa-df09-481c-8ed1-c292287fccd3",
+ CellID->712668730],
+Cell[1706, 46, 96, 1, 26, "Notes",ExpressionUUID->"7c64e8f7-f862-4114-b709-bfa7f6532180",
+ CellID->901002421]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1839, 52, 530, 14, 68, "ExamplesInitializationSection",ExpressionUUID->"1bf8a07c-1f3f-4c0c-8569-9ea267bb7a34",
+ CellID->886113615],
+Cell[2372, 68, 183, 3, 46, "ExampleInitialization",ExpressionUUID->"4307132e-8cb1-44dc-9652-d7fa4f09877c",
+ CellID->1841119390]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2592, 76, 442, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"1d384147-76e1-40ce-ac9d-c935559759b2",
+ CellID->586990925],
+Cell[3037, 90, 1230, 31, 82, "Code",ExpressionUUID->"791163ae-49c3-4983-a229-ebe551995f25",
+ CellID->1719252291]
+}, Open  ]]
+}
+]
+*)
+

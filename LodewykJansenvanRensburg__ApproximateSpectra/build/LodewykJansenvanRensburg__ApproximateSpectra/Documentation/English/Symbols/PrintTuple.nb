@@ -1,0 +1,254 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      9537,        244]
+NotebookOptionsPosition[      6781,        183]
+NotebookOutlinePosition[      8699,        231]
+CellTagsIndexPosition[      8615,        226]
+WindowTitle->PrintTuple
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "404b6869-57a6-4e10-a353-a960d45f128a"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "662b6349-4801-4b02-bfbe-38d0065eb466"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "fdca9949-0123-4cf2-96f6-1d9389e1eafd"]
+        }],ExpressionUUID->"bd98ebaa-1eb8-4c3a-a95e-ec2d25e9ad9c"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+PrintTuple\"" :> None, "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+PrintTuple"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/PrintTuple.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+              False]]; SelectionMove[
+           DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+PrintTuple" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "2791a162-acf1-478c-84c5-9f7bf3c57157"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "3cf27c2e-a6d0-41b8-9b10-3b0c08174037"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"ff227819-5fcd-4521-83b4-c7f5086a29e1"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"de5f3287-aa84-476a-8430-f617471fb64e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "PrintTuple", "ObjectName",ExpressionUUID->
+      "5520cc26-0010-4768-a95b-bb0040728c47"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"9fe27b3f-1e3f-470c-8e70-f01aac7385c1"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "32dfcf42-2649-419d-81d9-4e9683bf42c6"]
+    }],ExpressionUUID->"4b334820-7cfe-41f7-872d-b9ccdfaa7a1f"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"650c76ba-d31a-436f-8c55-\
+706c16b748eb"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"PrintTuple", "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ed21141a-d2f9-49ec-aef1-57c543aeb44a"],
+     " \[LineSeparator]XXXX"
+    }],ExpressionUUID->"f5c0cc97-01b9-48df-bc53-cf96a9803913"]}
+  }]], "Usage",
+ CellID->1306492457,ExpressionUUID->"c2ffb90f-e2a6-412e-9a75-4c9d1f581f38"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"e8039439-5389-46c0-a94f-ed48a37864df"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"895407b8-421b-4871-b748-b02ebff6ac75"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "6b75b1a3-53c9-4907-93b6-88fe47084ee7"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->447311558,ExpressionUUID->"c96d7f6e-f820-4757-9598-52902a463445"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproximateSpectra`\>\"",
+   "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->530564652,ExpressionUUID->"9a1fda8d-6de3-4a6f-b511-c68ef3411346"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"45832179-4788-4cde-9f9a-fc8da9e09085"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PrintTuple",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 30.396590}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> "PrintTuple[] XXXX", "synonyms" -> {}, "tabletags" -> {}, 
+    "title" -> "PrintTuple", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "PrintTuple", "type" -> "Symbol", "uri" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+PrintTuple"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"581d9e6b-1cd2-419f-abed-bdbe91e14731"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4914, 133, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"c96d7f6e-f820-4757-9598-52902a463445",
+   CellTags->"PrimaryExamplesSection",
+   CellID->447311558]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8416, 219}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[578, 21, 3181, 76, 70, "AnchorBarGrid",ExpressionUUID->"ff227819-5fcd-4521-83b4-c7f5086a29e1",
+ CellID->1],
+Cell[3762, 99, 126, 0, 70, "ContextNameCell",ExpressionUUID->"de5f3287-aa84-476a-8430-f617471fb64e"],
+Cell[CellGroupData[{
+Cell[3913, 103, 553, 14, 70, "ObjectNameGrid",ExpressionUUID->"650c76ba-d31a-436f-8c55-706c16b748eb"],
+Cell[4469, 119, 408, 9, 70, "Usage",ExpressionUUID->"c2ffb90f-e2a6-412e-9a75-4c9d1f581f38",
+ CellID->1306492457]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4914, 133, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"c96d7f6e-f820-4757-9598-52902a463445",
+ CellTags->"PrimaryExamplesSection",
+ CellID->447311558],
+Cell[6346, 172, 235, 4, 70, "Input",ExpressionUUID->"9a1fda8d-6de3-4a6f-b511-c68ef3411346",
+ CellID->530564652]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[6699, 181, 78, 0, 70, "FooterCell",ExpressionUUID->"45832179-4788-4cde-9f9a-fc8da9e09085"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

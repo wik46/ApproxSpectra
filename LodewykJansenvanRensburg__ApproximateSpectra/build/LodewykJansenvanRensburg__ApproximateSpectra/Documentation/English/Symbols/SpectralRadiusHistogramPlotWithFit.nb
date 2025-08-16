@@ -1,0 +1,369 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     14687,        359]
+NotebookOptionsPosition[     10711,        280]
+NotebookOutlinePosition[     13478,        340]
+CellTagsIndexPosition[     13393,        335]
+WindowTitle->SpectralRadiusHistogramPlotWithFit
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "LODEWYK JANSENVAN RENSBURG/ APPROXIMATE SPECTRA SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "bda547ee-9799-40fc-83bd-9211c32864ed"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "96fdf810-949b-4144-9a81-38cafa7ae53e"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "03f02e86-9ae7-44e4-a2c0-cd04dcdb2813"]
+        }],ExpressionUUID->"6b8185c5-7748-455b-b3a9-19a923b2673d"],
+        StripOnInput->False],{
+       "\"LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFit\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard[
+         "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFit"], Delimiter, "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/\
+LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFit.html"], StandardForm]], "Input", 
+                TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[False], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFit" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "19572d14-2e7a-4833-a082-cb891e9d0cf0"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "b2521a72-b2e7-4e1a-a93b-b4eeb961b3c1"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"8303fdf1-dd4d-4017-a996-7607b4d24f31"],
+
+Cell["LodewykJansenvanRensburg`ApproximateSpectra`", "ContextNameCell",ExpressionUUID->"878b9086-dbbd-4629-99da-8e71009de112"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "SpectralRadiusHistogramPlotWithFit", "ObjectName",ExpressionUUID->
+      "a8022610-d329-493f-97e1-bb292bd92651"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"39873b5f-48cb-42fb-80e8-26b1f7016285"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "11eaf9b2-e49e-447c-a1cd-4681aadf3f81"]
+    }],ExpressionUUID->"bfc5d400-9b21-4316-bf59-212f89ed15d0"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"97165086-f7c8-47d4-80b8-\
+06cd5742eaaa"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"SpectralRadiusHistogramPlotWithFit", "[", "]"}]], 
+      "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a70a493f-8915-482f-9344-4aa9c3871cac"],
+     " \[LineSeparator]\nThe goal is to determine if the spectral radius of \
+in independent Haar unitary matrices convergence to the spectral radius in \
+free Haar unitary operators. \n\n\tThis function takes as input fixed \
+coefficient tuple A = {A1,A2}, computes the  spectral radius of A1 \
+\[CircleTimes] u1 + A2 \[CircleTimes] u2  over the specified number of \
+realizations \"SampleSize\". Plots an approximation of the distribution of \
+the spectral radius at a fixed size. \n What does this do? Given a fixed \
+matrix size d, is computes numRealization times the spec_rad of our \
+realization, \nand plots the histogram of bins. That is the area under the \
+histogram represents the probability that spec_rad will fall inside a given \
+interval."
+    }],ExpressionUUID->"623153bd-63c8-4a6b-9add-5eaac6f2e2ca"]}
+  }]], "Usage",
+ CellID->965514826,ExpressionUUID->"b5b760cf-51de-4e8d-92a1-ac77a029e81e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {4.813671875000001, 8.786328125}}]],
+  ExpressionUUID->"3cd7e8ef-3677-42b3-b9dc-95567d5993c7"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"b86c34f8-7bbe-48a5-b661-9d3ef6574aff"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "71c55d16-820f-4e05-b6cf-9f1806a77e2b"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->224567120,ExpressionUUID->"9b1c7645-172c-488a-b45c-7b494f63a100"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<LodewykJansenvanRensburg`ApproximateSpectra`\>\"",
+   "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->1169296113,ExpressionUUID->"8f3be23d-e7ab-44f5-99e6-ed786d849db3"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.3936718750000008, 13.206328125}}]],ExpressionUUID->
+  "4611f125-2902-445d-ae55-a359caa78f75"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"132e87f2-6a68-4310-a8c2-76a1d2a37550"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "45fbf3e7-f419-4e4e-bd96-5f476f7eea4e"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1160913161,ExpressionUUID->"bce8a7c1-f2f9-4a40-9f35-0d205bc9957f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Generating", " ", "a", " ", "coefficient", " ", "matrix"}], 
+   "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"k", " ", "=", " ", "2"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Size", " ", "of", " ", "Coefficient", " ", "Matrix"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"g", " ", "=", " ", "2"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Length", " ", "of", " ", "tuple"}], ",", " ", 
+     RowBox[{
+     "must", " ", "be", " ", "2", " ", "for", " ", "AnalyzeTupleSpectrum"}]}],
+     "*)"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"RandomComplex", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"g", ",", "k", ",", "k"}], "}"}]}], "]"}]}], ";"}], "\n", 
+   "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Running", " ", "function"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"d", " ", "=", " ", "50"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Size", " ", "dxd", " ", "unitaries"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"numRealization", " ", "=", " ", "1000"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"How", " ", "many", " ", "experiments"}], " ", "*)"}], "\n", 
+   RowBox[{"SpectralRadiusHistogramPlotWithFit", "[", 
+    RowBox[{"A", ",", " ", "numRealization", ",", " ", "50"}], 
+    "]"}]}]}]], "Code",
+ CellID->948826722,ExpressionUUID->"473e0c60-817b-4bfb-a483-a71b752a81c0"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"5314d627-4c3b-434b-93cf-8d9413088301"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 830.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"SpectralRadiusHistogramPlotWithFit",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 8, 16, 16, 14, 34.149386}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "LodewykJansenvanRensburg`ApproximateSpectra`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Lodewyk Jansenvan Rensburg/ Approximate Spectra Symbol", 
+    "language" -> "en", "paclet" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra", "status" -> "None", 
+    "summary" -> 
+    "SpectralRadiusHistogramPlotWithFit[] The goal is to determine if the \
+spectral radius of in independent Haar unitary matrices convergence to the \
+spectral radius in free Haar unitary operators. This function takes as input \
+fixed coefficient tuple A = {A1,A2}, computes the spectral radius of A1 \
+\\[CircleTimes] u1 + A2 \\[CircleTimes] u2 over the specified number of \
+realizations \"SampleSize\". Plots an approximation of the distribution of \
+the spectral radius at a fixed size. What does this do? Given a fixed matrix \
+size d, is computes numRealization times the spec_rad of our realization, and \
+plots the histogram of bins. That is the area under the histogram represents \
+the probability that spec_rad will fall inside a given interval.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "SpectralRadiusHistogramPlotWithFit", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> 
+    "SpectralRadiusHistogramPlotWithFit", "type" -> "Symbol", "uri" -> 
+    "LodewykJansenvanRensburg/ApproximateSpectra/ApproxSpectra/ref/\
+SpectralRadiusHistogramPlotWithFit"}},
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"893dd124-7acf-4494-b422-38af1f4bd026"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5826, 145, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"9b1c7645-172c-488a-b45c-7b494f63a100",
+   CellTags->"PrimaryExamplesSection",
+   CellID->224567120]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13194, 328}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[602, 21, 3287, 77, 70, "AnchorBarGrid",ExpressionUUID->"8303fdf1-dd4d-4017-a996-7607b4d24f31",
+ CellID->1],
+Cell[3892, 100, 126, 0, 70, "ContextNameCell",ExpressionUUID->"878b9086-dbbd-4629-99da-8e71009de112"],
+Cell[CellGroupData[{
+Cell[4043, 104, 577, 14, 70, "ObjectNameGrid",ExpressionUUID->"97165086-f7c8-47d4-80b8-06cd5742eaaa"],
+Cell[4623, 120, 1166, 20, 70, "Usage",ExpressionUUID->"b5b760cf-51de-4e8d-92a1-ac77a029e81e",
+ CellID->965514826]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5826, 145, 1429, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"9b1c7645-172c-488a-b45c-7b494f63a100",
+ CellTags->"PrimaryExamplesSection",
+ CellID->224567120],
+Cell[7258, 184, 236, 4, 70, "Input",ExpressionUUID->"8f3be23d-e7ab-44f5-99e6-ed786d849db3",
+ CellID->1169296113],
+Cell[CellGroupData[{
+Cell[7519, 192, 1415, 37, 70, "ExampleSection",ExpressionUUID->"bce8a7c1-f2f9-4a40-9f35-0d205bc9957f",
+ CellID->1160913161],
+Cell[8937, 231, 1462, 39, 70, "Code",ExpressionUUID->"473e0c60-817b-4bfb-a483-a71b752a81c0",
+ CellID->948826722]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[10629, 278, 78, 0, 70, "FooterCell",ExpressionUUID->"5314d627-4c3b-434b-93cf-8d9413088301"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
