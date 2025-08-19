@@ -7,4 +7,4 @@ Installation and Usage
 2. Run in Mathematica
 
       PacletDirectoryLoad["path/LodewykJansenvanRensburg__ApproxSpectra"];
-      Needs["LodewykJansenvanRensburg`ApproximateSpectra`"];
+      Needs["LodewykJansenvanRensburg\`ApproximateSpectra\`"];
